@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--using html5-->
+<html>
+	<head>
+		<title> a game in Javascript and HTML </title>
+		<script language = "JavaScript">
+			function VerifLimites(form)
+			{
+				V = form.Val.value;
+				if((V > 100) || (V < 10))
+				{
+					alert("you lose!");
+					window.maximize();
+				}
+				else
+				{
+					alert("you win!");
+				}
+				if(V == 0)
+				{
+					if(confirm("Are you sure you want to quit?"))
+					window.close();
+				}
+			}
+
+		</script>
+	</head>
+	<body>
+		<h1><b><u>A game in html and javascript</u></b></h1>
+		<hr>
+		<br>
+		<p>Enter a number between 10 and 100 : </p>
+		<FORM NAME = "Enter">
+			<INPUT
+				TYPE = "text"
+				NAME = "Val">
+			<INPUT
+				TYPE = "button"
+				NAME = "Test"
+				VALUE = "Test"
+				ONCLICK = "VerifLimites(this.form)">
+		</FORM>
+	</body>
+</html>
